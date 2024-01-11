@@ -5,16 +5,13 @@
   flex-direction: column;
 }
 
-nav {  
+
+
+nav {
   padding: auto;
   margin: 40px 144px 0px 144px;
   height: 20px;
-}
-
-ul {
-  margin: 0;
   color: white;
-  padding: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;

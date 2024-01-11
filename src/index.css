@@ -1,0 +1,61 @@
+@import './fonts.css';
+
+.Home {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {  
+  padding: auto;
+  margin: 40px 144px 0px 144px;
+  height: 20px;
+}
+
+ul {
+  margin: 0;
+  color: white;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  div {
+    width: 8%;
+    margin: 1.6%;
+  }
+}
+.nav-icon{
+  display: flex;
+  justify-content: space-evenly;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+
+
+body {
+  margin: 0;
+  height: 1000px;
+  /*background-image: url("./assets/images/home-background.jpg"); */
+  background-size: cover; /* Adjust the background size as needed */
+  background-position: center; /* Adjust the background position as needed */
+  
+  background: 
+    linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), 
+    url("./assets/images/home-background.jpg");
+
+
+  font-family:'Franklin Gothic', sans-serif;
+  font-weight: normal;
+}
+
+.logo-home {
+  margin: 0px;
+  
+}
+.logo1 {
+  width: 80px;
+}

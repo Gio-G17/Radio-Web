@@ -1,41 +1,179 @@
 @import './fonts.css';
 
-.Home {
+
+
+
+.nav-bar {
+  
   display: flex;
-  flex-direction: column;
+  margin-right: 15%;
+  margin-left: 15%;
+  
 }
 
+.logo {
+  width: 122px;
+  height: 122px;
+  padding-top: 8px;
+  padding-right: 4px;
+}
 
+.home-btn, .abt-btn, .shop-btn, .cont-btn {
+  height: -122px;
+  width: 122px;
+  padding-right: 4px;
+  padding-left: 4px;
+  font-size: 18;
+}
 
-nav {
-  padding: auto;
-  margin: 40px 144px 0px 144px;
-  height: 20px;
-  color: white;
+ul{
+  align-items: center; 
   display: flex;
+  color: white;
+  justify-content: space-around;
+}
+
+ .nav-elmnts{
+  display: flex;
+  color: white;
   justify-content: space-around;
   align-items: center;
-  
-  div {
-    width: 8%;
-    margin: 1.6%;
-  }
 }
-.nav-icon{
+
+
+
+.nav-icons{
+display: flex;
+align-items: center;
+margin-left: 25%;
+}
+
+.nav-icons1{
   display: flex;
-  justify-content: space-evenly;
-  img {
+  justify-content: flex-end;
+  align-items: center;  
+}
+
+.icon-wp, .icon-yt{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 30px;
     height: 30px;
-  }
+    padding: 15px;
+} 
+
+
+.nav-icons2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
+.icon-insta, .icon-fb {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 15px; 
+}
+  
 
+
+.menu-button {
+  display: none;
+    width: 40px;
+    height: 40px
+  }
+  
+
+  
+  @media(max-width:480px){
+  
+.nav{
+  flex-direction: column;
+  align-items: start;
+  display: flex;
+}
+
+.nav-bar {
+     width: 480px; 
+     margin: 0px;
+     
+}
+
+.menu-button{
+    display:flex;
+    margin-left: -200px;
+    width: 40px;
+    height: 40px;
+    
+}
+
+nav ul{
+  display: none;  
+}
+
+nav ul.open{
+display: flex;  
+}
+
+.nav-elmnts{   
+  margin-top: 50px;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.home-btn, .abt-btn, .shop-btn, .cont-btn {
+  text-align: center;
+  width: 100%;
+  margin: 0.2rem 0.5rem;
+} 
+
+  .nav-icons{  
+  align-items: center;
+  margin-left: 0px;
+  }
+  
+  .nav-icons1{
+    justify-content: flex-end;
+  }
+  
+  .icon-wp, .icon-yt{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      padding: 15px;
+  } 
+  
+  
+  .nav-icons2{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  
+  .icon-insta, .icon-fb {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      padding: 15px; 
+  }
+  
+
+
+  }
 
 
 body {
   margin: 0;
-  height: 1000px;
+  height: 5000px;
   /*background-image: url("./assets/images/home-background.jpg"); */
   background-size: cover; /* Adjust the background size as needed */
   background-position: center; /* Adjust the background position as needed */
@@ -49,10 +187,6 @@ body {
   font-weight: normal;
 }
 
-.logo-home {
-  margin: 0px;
-  
-}
-.logo1 {
-  width: 80px;
-}
+
+
+

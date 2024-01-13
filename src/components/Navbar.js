@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 
@@ -13,42 +13,69 @@ function Navbar() {
   };
 
   const scrollToShop = () => {
-    scroll.scrollMore(500, { duration: 1000 });
+    scroll.scrollMore(1500, { duration: 1000 });
   };
   const scrollToContact = () => {
     scroll.scrollMore(500, { duration: 1000 });
   };
   
+  function openSocialMedia() {
+    var socialMediaUrl = 'https://www.example.com';
+    window.open(socialMediaUrl, '_blank');
+  }
 
-
-
+  const [menuOpen, setMenuOpen] = useState(false)
+  
   return (
-    <nav>
-      
-      <div className="logo" onClick={scrollToTop}>
-      <img src={require('../assets/images/logo1.png')} alt="logo" className='logo1'/>
-      </div>
-        
-      <div onClick={scrollToTop}>Home</div>
-      <div onClick={scrollToAbout}>About Us</div>
-      <div onClick={scrollToShop}>Shop</div>
-      <div onClick={scrollToContact}>Contact Us</div>
-
-        
-        
-      <div className='nav-icon'>
-      
-          <img src={require('../assets/images/icon-whatsapp.png')} alt="logo" className='icon-wp'/>
-          <img src={require('../assets/images/icon-yt.png')} alt="logo" className='icon-yt'/>
-      
-      </div>
-      
-      <div className='nav-icon'>
-          <img src={require('../assets/images/icon-instagram.png')} alt="logo" className='icon-insta'/>
-          <img src={require('../assets/images/icon-fb.png')} alt="logo" className='icon-fb'/>
-      </div>
     
-    </nav>
+    <div>
+        <nav>
+          
+            <div class='nav-bar'>
+            
+                <div class="logo" onClick={scrollToTop}>
+                    <img src={require('../assets/images/logo1.png')} alt="logo1" class='logo'/>
+                </div>
+
+            <ul className={menuOpen ? "open" : ""}>
+
+                <div class='nav-elmnts'>
+                    <div onClick={scrollToTop} class='home-btn'>Home</div>
+                    <div onClick={scrollToAbout} class='abt-btn'>About Us</div>
+                    <div onClick={scrollToShop} class='shop-btn'>Shop</div>
+                    <div onClick={scrollToContact} class='cont-btn'>Contact Us</div>
+                </div>
+                </ul>
+                <div class='nav-icons'>
+
+                    <div class='nav-icons1'>
+                        <img src={require('../assets/images/icon-whatsapp.png')} alt="logo" class='icon-wp'/>
+                        <img src={require('../assets/images/icon-yt.png')} alt="logo" class='icon-yt'/>
+                    </div>
+                
+                    <div class='nav-icons2'>
+                        <img src={require('../assets/images/icon-instagram.png')} alt="logo" class='icon-insta'/>
+                        <img src={require('../assets/images/icon-fb.png')} alt="logo" class='icon-fb'/>
+                    </div>
+
+                </div>
+
+                <div 
+                class = 'menu-button' 
+                onClick={()=> {
+                  setMenuOpen(!menuOpen);
+
+                }}>
+                  <img src={require('../assets/images/icon-menu.png')} alt="menu1" class='menu'/>
+                </div>
+
+            </div>
+
+               
+          
+        </nav>
+
+      </div>
   )
 }
 

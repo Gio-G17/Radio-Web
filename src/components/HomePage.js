@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { styled, Slider } from '@mui/material';
 import playIcon from '../assets/images/play-icon.png';
 import pauseIcon from '../assets/images/pause-icon.png';
 import MuteIcon from '../assets/images/mute-icon.png';
@@ -28,6 +27,8 @@ function HomePage() {
     setVolume(isMuted ? 50 : 0);
   };
 
+  
+
   return (
     
     <div className="home-page">
@@ -39,12 +40,14 @@ function HomePage() {
         <img src={isMuted || volume === 0 ? MuteIcon : UnmuteIcon} alt="play" onClick={handleMuteToggle} />
         <label>
           <input
+          className="slider"
             type="range"
             min="0"
             max="100"
             step="1"
             value={isMuted ? 0 : volume}
             onChange={handleVolumeChange}
+            
           />
           <div>Volume: {isMuted ? 'Muted' : `${volume}%`}</div>
         </label>

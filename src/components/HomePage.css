@@ -2,23 +2,14 @@
     /* Add your styling for the pause/play icon */
     cursor: pointer;
   }
+ 
+  .slider{
+    accent-color: #4CAF50; /* Set the desired color for the label */
+    font-weight: bold; /* Optionally set other styles */
+  }
 
 @media (max-width: 600px) {
    
-    .test {
-      /* Adjust styles for smaller screens */
-      width: 30%;
-    }
-  
-    .test2 {
-      width: 30%;
-    }
-
-    .test3{
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-
-    }
+    
 
   }

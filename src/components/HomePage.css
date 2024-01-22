@@ -1,12 +1,142 @@
-.pp-icon {
-    /* Add your styling for the pause/play icon */
-    cursor: pointer;
+.ppdiv-icon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 116px;
+  }
+
+  .pp-icon {
+    display: flex;
+    justify-content: center;
+    width: 182px;
+    height: 182px;
+    top: 246px;
+
   }
  
-  .slider{
-    accent-color: #4CAF50; /* Set the desired color for the label */
-    font-weight: bold; /* Optionally set other styles */
+  
+
+.volumehand{
+padding: 60px;
+}
+
+
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 17.5rem;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -12px; /* Centers thumb on the track */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #ffffff;
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: #ffffff;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+  outline: 3px solid #ffffff;
+  outline-offset: 0.125rem;
+}
+
+
+
+
+.disc{
+padding-top: 132px;
+color: #ffffff;
+font-size: 50px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .munm-icons{
+  
+    width: 30px;
+    height: 30px;
+
   }
+
+  .volumehand{
+
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+    top: 122px;
+
+
+  }
+
+  .munm-icons{
+
+    width: 50px;
+    height: 50px;
+    padding-right: 15px ;
+
+
+  }
+
+
 
 @media (max-width: 600px) {
    

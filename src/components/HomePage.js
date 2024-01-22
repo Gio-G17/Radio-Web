@@ -31,28 +31,47 @@ function HomePage() {
 
   return (
     
-    <div className="home-page">
-      <div className="pp-icon">
-        <img src={on ? pauseIcon : playIcon} alt="play" onClick={pauseplay} />
-      </div>
+    <div class="home-page">
 
-      <>
-        <img src={isMuted || volume === 0 ? MuteIcon : UnmuteIcon} alt="play" onClick={handleMuteToggle} />
-        <label>
-          <input
-          className="slider"
-            type="range"
-            min="0"
-            max="100"
-            step="1"
-            value={isMuted ? 0 : volume}
-            onChange={handleVolumeChange}
-            
-          />
-          <div>Volume: {isMuted ? 'Muted' : `${volume}%`}</div>
-        </label>
-      </>
+      
+        <div class="ppdiv-icon">
+          <img src={on ? pauseIcon : playIcon} alt="play" onClick={pauseplay} class="pp-icon" />
+        </div>
+
+
+        <div class='volumehand'>
+
+          <img src={isMuted || volume === 0 ? MuteIcon : UnmuteIcon} alt="play" onClick={handleMuteToggle} class='munm-icons' />
+          
+          <div class = 'slider'>
+            <input
+                className="vlslider"
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                value={isMuted ? 0 : volume}
+                onChange={handleVolumeChange}
+            />
+          </div>
+        </div>
+
+
+
+        <div>
+          <p class = 'disc'>LIT Radio <br></br>
+          Streaming from <br></br>
+          the heart of <br></br>
+          Beirut, Lebanon
+          </p>
+        </div>
+
+
+
     </div>
+
+
+
   );
 }
 
